@@ -11,4 +11,5 @@ Este projeto foi desenvolvido como Trabalho de Conclusão de Curso (TCC) e consi
 - **Reserva de Mesas**: Permite aos usuários fazerem reservas de mesas.
 - **Sincronização**: Todas as funcionalidades são sincronizadas entre as aplicações desktop e mobile.
 
-![image](https://github.com/user-attachments/assets/40140985-7656-4404-85ec-9efcaf5ab5ab)
+![image](https://github.com/user-attachments/assets/33b74e15-0088-49eb-9098-f8c2a6862b44)
+
