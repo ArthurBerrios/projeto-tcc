@@ -1,0 +1,385 @@
+﻿* {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}
+
+body {
+    background: white;
+}
+
+.maior {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.logob {
+    margin-left: 30px;
+    width: 6vw;
+    height: 6vw;
+}
+
+p.andar {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 26px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: black;
+    position: relative;
+}
+
+.esquerda {
+    width: 60%;
+    height: 100%;
+    background-color: white;
+    
+}
+.
+
+.imgmesa {
+    width: 100%;
+    height: 100%;
+}
+
+.mesa1,.mesa2,.mesa3,.mesa4,.mesa5,.mesa6,.mesa7,.mesa8,.mesa9{
+    width:7vw;
+    height:7vw;
+    background-color:blue;
+    text-align:center;
+    border:0
+}
+
+.mesa {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+
+.group {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+input.nome {
+    height: 35px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    background-color: transparent;
+    border-bottom: 1px solid #cfb323;
+    border-left-style: none;
+    border-left-color: inherit;
+    border-left-width: medium;
+    border-right-style: none;
+    border-right-color: inherit;
+    border-right-width: medium;
+    border-top-style: none;
+    border-top-color: inherit;
+    border-top-width: medium;
+    color : white;
+}
+
+    input.nome:focus {
+        outline: none;
+    }
+
+/* LABEL ======================================= */
+label.nome {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #cfb323;
+    font-size: 15px;
+    position: absolute;
+    pointer-events: none;
+    left: 235px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+input.nome:focus ~ label, input.nome:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: #cfb323;
+}
+
+/* BOTTOM BARS ================================= */
+.bar {
+    position: relative;
+    display: block;
+    width: 170px;
+}
+
+    .bar:before, .bar:after {
+        content: '';
+        height: 2px;
+        width: 0;
+        bottom: 1px;
+        position: absolute;
+        background: #cfb323;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;
+    }
+
+    .bar:before {
+        left: 50%;
+    }
+
+    .bar:after {
+        right: 50%;
+    }
+
+/* active state */
+input.nome:focus ~ .bar:before, input.nome:focus ~ .bar:after {
+    width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 300px;
+    top: 25%;
+    left: 165px;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* active state */
+input.nome:focus ~ .highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: black;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: black;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: black;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+
+
+.direito {
+    width: 40%;
+    height: 100%;
+    background-color: black;
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+.banquete {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.direito h1 {
+    margin-top: 150px;
+    margin-bottom: 80px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 30px;
+    color: #cfb323;
+    animation: entrar 1s forwards;
+    opacity: 0;
+}
+
+@keyframes entrar {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mais {
+    width: 3vw;
+    height: 3vw;
+    background-color: #cfb323;
+    color: black;
+    border: 0;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size:12px;
+}
+
+.lugar {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: #cfb323;
+}
+
+.horario {
+    background-color: #cfb323;
+    border: 0;
+    border-radius: 8px;
+    width: 100px;
+    height: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color : black;
+}
+
+.data {
+    background-color: #cfb323;
+    border: 0;
+    border-radius: 8px;
+    width: 120px;
+    height: 40px;
+    color: black;
+}
+
+.reservar {
+    margin-top: 30px;
+    width: 100px;
+    height: 40px;
+    border: 0;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    background-color: black;
+    color: white;
+}
+
+    .reservar:hover {
+        border-radius: 0;
+        cursor: pointer;
+        border-bottom: solid 1px black;
+        border-top: solid 1px black;
+        background-color: transparent;
+        color: #cfb323;
+        border-left: none;
+        border-right: none;
+        transition: all 1s;
+        cursor: pointer;
+    }
+
+.logo {
+    padding-right: 368px;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: 5px;
+    animation-name: zoom;
+    animation-duration: 3s;
+}
+
+    .logo:hover {
+        color: #cfbc60;
+        /*  animation: hoverEfects.5s infinite*/
+    }
+/*
+  @keyframes zoom{
+  0%{
+    transform: scale(0);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  75%{
+    transform: scale(.9);
+  }
+  100%{
+    transform: scale(1);
+  }
+  }
+  @keyframes hoverEfects{
+    0%{
+      transform: scale(1);
+    }
+    50%{
+      transform: scale(.9);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+
+*/
+
+.navbar {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 130px;
+    background: black;
+    color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.navbar-overlay {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+
+
+.direita h1, input, .group label, .section button, .reservar, .mais, .menos, .lugar {
+    animation: entrar 1s forwards;
+    opacity: 0;
+}
+

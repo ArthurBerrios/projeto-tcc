@@ -1,0 +1,254 @@
+﻿
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.cadastrar {
+    width: 100%;
+    height: 47vw;
+    display: flex;
+}
+
+    .cadastrar img {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+
+.esq {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.dir {
+    width: 40%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.cadastrar h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5rem;
+    font-weight: bold;
+    margin-top: 110px;
+    margin-bottom: 60px;
+}
+
+.nome {
+    margin-top: 70px;
+}
+
+.group {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+input {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+}
+
+    input:focus {
+        outline: none;
+    }
+
+/* LABEL ======================================= */
+label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: 15px;
+    position: absolute;
+    pointer-events: none;
+    left: 235px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label {
+    top: -10px;
+    font-size: 14px;
+    color: black;
+}
+
+/* BOTTOM BARS ================================= */
+.bar {
+    position: relative;
+    display: block;
+    width: 300px;
+}
+
+    .bar:before, .bar:after {
+        content: '';
+        height: 2px;
+        width: 0;
+        bottom: 1px;
+        position: absolute;
+        background: black;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;
+    }
+
+    .bar:before {
+        left: 50%;
+    }
+
+    .bar:after {
+        right: 50%;
+    }
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 300px;
+    top: 25%;
+    left: 165px;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: black;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: black;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: black;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+.concluir {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+    width: 7vw;
+    height: 5vh;
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    border: solid 2px black
+}
+
+    .concluir:hover {
+        border-radius: 0;
+        background-color: white;
+        color: black;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        border-left: none;
+        border-right: none;
+        transition: all 1s;
+        cursor: pointer;
+    }
+
+.cadastrar button, input, h1, label {
+    animation: entrar 1s forwards;
+    opacity: 0;
+}
+
+@keyframes entrar {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        position: fixed;
+        width: 600px;
+        height: 600px;
+    }
+
+    .cadastrar img {
+        display: none;
+    }
+
+    .esq {
+        width: 50%;
+        height: 600px;
+        background-color: yellow;
+    }
+
+    .dir {
+        width: 50%;
+        height: 600px;
+    }
+
+    label {
+        left: 1px;
+        padding-left: 29px;
+    }
+
+    input {
+        width: 80%;
+    }
+
+    .concluir {
+        width: 80px;
+        height: 40px;
+    }
+
+    .lblcadastro {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bolder;
+        font-size: 15px;
+        color: black;
+    }
+}
+
